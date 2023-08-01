@@ -1,0 +1,65 @@
+/* customer-edit.component.css */
+
+/* Container for the entire form */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form section headings */
+  .form-heading {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Individual form fields */
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .form-field label {
+    font-weight: bold;
+  }
+  
+  .form-field input[type="text"],
+  .form-field input[type="number"],
+  .form-field input[type="tel"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form-buttons button {
+    padding: 12px 30px;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .form-buttons button.cancel-btn {
+    background-color: #ccc;
+  }
+  
+  /* Optional: Add hover and focus styles for better user experience */
+  .form-field input:focus,
+  .form-field input:hover,
+  .form-buttons button:hover {
+    border-color: #007bff;
+    outline: none;
+  }
+  

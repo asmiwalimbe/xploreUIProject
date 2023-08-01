@@ -1,0 +1,47 @@
+<div class="container">
+        <br>
+        <h1>Customer List</h1>
+        <button class="cancel-btn" (click)="addCustomer()">
+                Add Customer
+        </button>
+        <div class="col-sm-8">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>CustomerId</th>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                        <th>Phone_Number</th>
+                        <th>Country_Code</th>
+                        <th>Gender</th>
+                        <th>Balance</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let customer of Customers">
+                        <td>{{ customer.id }}</td>
+                        <td>{{ customer.firstname_ascii }}</td>
+                        <td>{{ customer.lastname }}</td>
+                        <td>
+                                <a href="mailto:{{ customer.email }}">{{ customer.email }}</a>
+                        </td>
+                        <td>{{ customer.phone_Number }}</td>
+                        <td>{{ customer.country_code }}</td>
+                        <td>{{ customer.gender }}</td>
+                        <td>
+                                {{ customer.balance | currency: 'USD':'symbol':'1.2-2' }}
+                        </td>
+                        <td>
+                            <button (click)="editCustomer(customer)">Edit</button>
+                        </td>
+                        <td>
+                            <button (click)="deleteCustomer(customer.id)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</div>
